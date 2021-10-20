@@ -1,0 +1,14 @@
+.vs
+.vs/*
+bin
+bin/*
+obj
+obj/*
+*csproj
+.sln
+*.vcxproj*
+*.csproj*
+*.sln*
+studenckie
+studenckie/*
+*/studenckie*
