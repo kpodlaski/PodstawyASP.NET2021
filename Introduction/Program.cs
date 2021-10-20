@@ -11,7 +11,7 @@ namespace Introduction
             List<Person> persons = new List<Person>();
             persons.Add(new Person(98021354321L, "Janina", "Kowalska", "1998/02/13"));
             persons.Add(new Person(98021354321L, "Janina", "Kowalska", "1998/02/13"));
-            persons.Add(new Person(88021354321L, "Tadeusz", "Kowalski", "1988/02/13"));
+            persons.Add(new Person(88121354321L, "Tadeusz", "Kowalski", "1988/12/13"));
             for(int i=0; i < persons.Count; i++)
             {
                 Console.WriteLine(persons[i]);
@@ -44,6 +44,21 @@ namespace Introduction
             foreach(Person p in salary.Keys)
             {
                 Console.WriteLine(p.Name + " " + p.Surname + " " + salary[p]);
+            }
+            Console.WriteLine("===============");
+            Console.WriteLine("====POCZĄTEK===");
+            foreach (Person p in persons)
+            {
+                Console.WriteLine(p.Pesel + " " + p.Surname);
+            }
+            persons.Sort();
+            persons.Sort(new CompareBySurname());
+            persons.Sort(Person.GetComparerByName());
+            Console.WriteLine("===============");
+            Console.WriteLine("==POSORTOWANE==");
+            foreach (Person p in persons)
+            {
+                Console.WriteLine(p.Pesel+" "+ p.Surname);
             }
 
         }
